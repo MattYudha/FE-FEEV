@@ -21,7 +21,7 @@ export default function Home() {
   const [loadingProducts, setLoadingProducts] = useState(true);
 
   useEffect(() => {
-    fetch(`${process.env.NEXT_PUBLIC_API_URL || "http://localhost:8080"}/api/products`)
+    fetch(`${process.env.NEXT_PUBLIC_API_URL || ""}/api/products`)
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
