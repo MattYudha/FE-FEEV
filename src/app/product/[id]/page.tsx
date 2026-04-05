@@ -39,7 +39,7 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
 
   useEffect(() => {
     // We fetch from the local Go backend
-    fetch(`http://localhost:8080/api/products/${resolvedParams.id}`)
+    fetch(`${process.env.NEXT_PUBLIC_API_URL || "http://localhost:8080"}/api/products/${resolvedParams.id}`)
       .then((res) => {
         if (!res.ok) throw new Error(`Product not found for ID: ${resolvedParams.id}. Please go back to the homepage and click the product again.`);
         return res.json();
