@@ -173,7 +173,7 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
             </motion.h1>
 
             <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-2 md:gap-4 mb-8 mt-4">
-              <span className="text-3xl md:text-4xl font-bold font-headline">${product.price.toFixed(2)}</span>
+              <span className="text-3xl md:text-4xl font-bold font-headline">Rp {product.price.toLocaleString("id-ID")}k</span>
               <div className="flex gap-1 text-primary items-center">
                 <span className="material-symbols-outlined text-black font-bold fill text-lg md:text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
                 <span className="material-symbols-outlined text-black font-bold fill" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
