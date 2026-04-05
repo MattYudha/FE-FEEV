@@ -214,8 +214,12 @@ export default function CartPage() {
   const { items, clearCart, totalItems, totalPrice } = useCartStore();
   const isAuthenticated = useAuthStore((state) => state.isAuthenticated);
   const [mounted, setMounted] = useState(false);
+  const [sessionId, setSessionId] = useState("");
 
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    setMounted(true);
+    setSessionId(`VF-${Math.random().toString(36).substring(7).toUpperCase()}`);
+  }, []);
 
   const subtotal = totalPrice();
   const grandTotal = subtotal;
@@ -236,7 +240,7 @@ export default function CartPage() {
               </h1>
               <div className="flex justify-between items-center mt-6">
                 <p className="font-mono text-sm uppercase tracking-widest opacity-60">
-                  Session ID: VF-{Math.random().toString(36).substring(7).toUpperCase()} | Units: {String(totalItems()).padStart(2, "0")}
+                  Session ID: {sessionId} | Units: {String(totalItems()).padStart(2, "0")}
                 </p>
                 {items.length > 0 && (
                   <button
