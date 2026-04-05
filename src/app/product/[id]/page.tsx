@@ -165,17 +165,17 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
               </span>
             </motion.div>
             
-            <motion.h1 variants={itemVariants} className="text-6xl font-black font-headline uppercase leading-[0.9] mb-4 tracking-tighter text-on-surface">
+            <motion.h1 variants={itemVariants} className="text-5xl md:text-6xl font-black font-headline uppercase leading-[0.9] mb-4 tracking-tighter text-on-surface">
               {product.name.split(' ')[0]} {product.name.split(' ')[1]}<br />
               <span className="text-primary-container bg-black px-2 mt-2 inline-block">
                 {product.name.split(' ').slice(2).join(' ')}
               </span> 
             </motion.h1>
 
-            <motion.div variants={itemVariants} className="flex items-center gap-4 mb-8 mt-4">
-              <span className="text-4xl font-bold font-headline">${product.price.toFixed(2)}</span>
-              <div className="flex gap-1 text-primary">
-                <span className="material-symbols-outlined text-black font-bold fill" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
+            <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-2 md:gap-4 mb-8 mt-4">
+              <span className="text-3xl md:text-4xl font-bold font-headline">${product.price.toFixed(2)}</span>
+              <div className="flex gap-1 text-primary items-center">
+                <span className="material-symbols-outlined text-black font-bold fill text-lg md:text-2xl" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
                 <span className="material-symbols-outlined text-black font-bold fill" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
                 <span className="material-symbols-outlined text-black font-bold fill" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
                 <span className="material-symbols-outlined text-black font-bold fill" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
@@ -236,10 +236,10 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
               <div className="flex flex-col gap-4">
                 <button
                   onClick={handleAddToCart}
-                  className="w-full bg-secondary-container text-black neo-border neo-shadow py-5 font-headline font-black text-2xl uppercase tracking-widest hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-[3px_3px_0px_0px_#000000] active:translate-x-[6px] active:translate-y-[6px] active:shadow-none transition-all flex items-center justify-center gap-4 group"
+                  className="w-full bg-secondary-container text-black neo-border neo-shadow py-4 md:py-5 font-headline font-black text-xl md:text-2xl uppercase tracking-widest hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-[3px_3px_0px_0px_#000000] active:translate-x-[6px] active:translate-y-[6px] active:shadow-none transition-all flex items-center justify-center gap-4 group"
                 >
                   ADD TO CART
-                  <span className="material-symbols-outlined text-4xl group-hover:rotate-12 transition-transform" data-icon="shopping_basket">
+                  <span className="material-symbols-outlined text-3xl md:text-4xl group-hover:rotate-12 transition-transform" data-icon="shopping_basket">
                     shopping_basket
                   </span>
                 </button>
@@ -248,10 +248,10 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
                     const success = handleAddToCart();
                     if (success) router.push("/cart");
                   }}
-                  className="w-full bg-primary-container text-black neo-border neo-shadow py-5 font-headline font-black text-2xl uppercase tracking-widest hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-[3px_3px_0px_0px_#000000] active:translate-x-[6px] active:translate-y-[6px] active:shadow-none transition-all flex items-center justify-center gap-4 group"
+                  className="w-full bg-primary-container text-black neo-border neo-shadow py-4 md:py-5 font-headline font-black text-xl md:text-2xl uppercase tracking-widest hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-[3px_3px_0px_0px_#000000] active:translate-x-[6px] active:translate-y-[6px] active:shadow-none transition-all flex items-center justify-center gap-4 group"
                 >
                   BUY NOW
-                  <span className="material-symbols-outlined text-4xl group-hover:translate-x-2 transition-transform" data-icon="arrow_forward">
+                  <span className="material-symbols-outlined text-3xl md:text-4xl group-hover:translate-x-2 transition-transform" data-icon="arrow_forward">
                     arrow_forward
                   </span>
                 </button>
@@ -300,7 +300,7 @@ export default function ProductDetail({ params }: { params: Promise<{ id: string
             className="mt-32 mb-16 pt-16 border-t-8 border-black border-dashed"
         >
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
-            <motion.h2 variants={itemVariants} className="text-5xl md:text-6xl font-headline font-black uppercase leading-[0.9] tracking-tighter">
+            <motion.h2 variants={itemVariants} className="text-4xl md:text-6xl font-headline font-black uppercase leading-[0.9] tracking-tighter">
               VISUAL<br/>DOCUMENTATION
             </motion.h2>
             <motion.div variants={itemVariants} className="font-mono text-[10px] md:text-xs text-left md:text-right opacity-60 uppercase font-black leading-relaxed">

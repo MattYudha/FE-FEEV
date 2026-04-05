@@ -82,13 +82,13 @@ const LoginForm = ({ toggle, onLoginSuccess }: { toggle: () => void; onLoginSucc
       exit="exit"
       className="w-full max-w-md"
     >
-      <div className="bg-white border-[5px] border-black p-10 shadow-[15px_15px_0px_0px_#000000] relative">
+      <div className="bg-white border-[5px] border-black p-6 md:p-10 shadow-[15px_15px_0px_0px_#000000] relative">
         <div className="mb-10">
           <div className="flex items-center gap-2 mb-2">
             <span className="material-symbols-outlined text-primary text-sm font-bold">lock</span>
             <span className="font-mono text-[9px] font-black uppercase tracking-[0.2em] opacity-40">Authentication Required</span>
           </div>
-          <h2 className="text-5xl headline font-black text-black uppercase tracking-tighter leading-none">Secure Access</h2>
+          <h2 className="text-4xl md:text-5xl headline font-black text-black uppercase tracking-tighter leading-none">Secure Access</h2>
         </div>
 
         <form className="space-y-8" onSubmit={handleSubmit}>
@@ -218,13 +218,13 @@ const RegisterForm = ({ toggle }: { toggle: () => void }) => {
       exit="exit"
       className="w-full max-w-md"
     >
-      <div className="bg-white border-[5px] border-black p-10 shadow-[15px_15px_0px_0px_#000000] relative">
+      <div className="bg-white border-[5px] border-black p-6 md:p-10 shadow-[15px_15px_0px_0px_#000000] relative">
         <div className="mb-10">
           <div className="flex items-center gap-2 mb-2">
             <span className="material-symbols-outlined text-primary text-sm font-bold">person_add</span>
             <span className="font-mono text-[9px] font-black uppercase tracking-[0.2em] opacity-40">Identity Creation</span>
           </div>
-          <h2 className="text-5xl headline font-black text-black uppercase tracking-tighter leading-none">New Identity</h2>
+          <h2 className="text-4xl md:text-5xl headline font-black text-black uppercase tracking-tighter leading-none">New Identity</h2>
         </div>
 
         <form className="space-y-6" onSubmit={handleSubmit}>

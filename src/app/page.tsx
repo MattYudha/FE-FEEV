@@ -64,7 +64,7 @@ export default function Home() {
               <motion.div variants={itemVariants} className="inline-block bg-secondary-container neo-border px-4 py-2 font-label font-bold text-sm transform -rotate-2 neo-shadow">
                 #1 PREMIUM DEVICE
               </motion.div>
-              <motion.h1 variants={itemVariants} className="text-6xl md:text-[5.5rem] leading-[1.1] relative">
+              <motion.h1 variants={itemVariants} className="text-5xl md:text-[5.5rem] leading-[1.1] relative">
                 <span className="relative inline-block hover:-translate-y-2 transition-transform cursor-default mr-4">Vape</span>
                 <span className="relative inline-block hover:-translate-y-2 transition-transform cursor-default">The</span><br />
                 <span className="text-primary bg-primary-container px-2 neo-border inline-block rotate-1 hover:-rotate-1 transition-all">Future.</span>
@@ -173,7 +173,7 @@ export default function Home() {
             className="max-w-7xl mx-auto px-6 relative z-10"
           >
             <div className="flex flex-col md:flex-row justify-between items-center mb-16 gap-4">
-              <h2 className="text-5xl bg-primary-container px-4 py-2 neo-border inline-block -rotate-1">Our Collection</h2>
+              <h2 className="text-4xl md:text-5xl bg-primary-container px-4 py-2 neo-border inline-block -rotate-1 text-center">Our Collection</h2>
               <div className="neo-border bg-surface px-4 py-2 font-label font-bold flex items-center gap-2 cursor-pointer neo-hover transition-transform">
                 FILTER: ALL <span className="material-symbols-outlined">expand_more</span>
               </div>
@@ -238,7 +238,7 @@ export default function Home() {
             className="grid lg:grid-cols-12 gap-8 items-start"
           >
             <div className="lg:col-span-5 space-y-8">
-              <motion.h2 variants={itemVariants} className="text-6xl leading-[0.9] bg-white inline-block px-4 py-2 neo-border neo-shadow">
+              <motion.h2 variants={itemVariants} className="text-4xl md:text-6xl leading-[0.9] bg-white inline-block px-4 py-2 neo-border neo-shadow">
                 Vape With<br />Attitude.
               </motion.h2>
               <motion.p variants={itemVariants} className="text-xl font-bold font-body text-gray-800 border-l-[4px] border-black pl-4">
